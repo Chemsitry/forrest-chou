@@ -1,0 +1,371 @@
+:root {
+  --landingheight: 600px;
+  --logowidth: .36;
+}
+
+body{
+  font-family: "Computer Modern Serif", serif
+  overflow-y: scroll;
+  background-color:#000000;
+  color:#ffffff;
+  margin:0;
+  padding:0;
+}
+.landing{
+  height:100vh;
+  width:inherit;
+  background-color: #000;
+  position: relative;
+
+  background-size:cover;
+
+  background-blend-mode: screen;
+
+  display: flex;
+  flex-direction:row;
+
+}
+
+.landinglogodiv{
+  width:calc(var(--logowidth)*140vh);
+  height:inherit;
+  display:flex;
+  flex-direction:column;
+  justify-content: center;
+}
+.landinglogodivdiv{
+  width:inherit;
+  height:var(--landingheight);
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: top;
+  padding-top: 82px;
+}
+
+.landinglogo{
+  width:calc(var(--logowidth) * 160vh * 28/36);
+  height:calc(var(--logowidth) * 160vh * 28/36);
+  object-fit: cover;
+}
+
+.landingmiddle{
+  width:20px;
+  height:inherit;
+}
+
+.landingtitlediv{
+  width:auto;
+  height:inherit;
+  display:flex;
+  flex-direction:column;
+  justify-content: center;
+}
+.landingtitledivdiv{
+  width:inherit;
+  height:var(--landingheight);
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: top;
+  padding-top: 85px;
+}
+.landingtitledivdivdiv{
+  width:inherit;
+  height:auto;
+  display:flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: top;
+}
+
+.landingtitle{
+  font-size: 36px;
+  margin:0;
+}
+.landingsubtitle{
+  font-size: 36px;
+  margin:0;
+  color:#5ff;
+}
+
+
+
+@media (min-height:400px){
+
+  .landing{
+    height:100vh;
+    width:inherit;
+    background-color: #000;
+    position: relative;
+
+    background-size:cover;
+    background-blend-mode: screen;
+    display: flex;
+    flex-direction:column;
+  }
+
+  .landinglogodiv{
+    width:inherit;
+    height:calc(var(--logowidth) * (min(200vw,150vh)) );
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+  }
+  .landinglogodivdiv{
+    width:inherit;
+    height:calc(var(--logowidth)*(min(200vw,150vh)) -50px);
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    padding-top: 50px;
+  }
+
+  .landinglogo{
+    width:calc(var(--logowidth) * (min(200vw,150vh)) * 28/36);
+    height:calc(var(--logowidth) * (min(200vw,150vh)) * 28/36);
+    object-fit: cover;
+  }
+
+  .landingmiddle{
+    height:20px;
+    width:inherit;
+  }
+
+  .landingtitlediv{
+    width:inherit;
+    height:auto;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+  }
+  .landingtitledivdiv{
+    width:inherit;
+    height:auto;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: top;
+    padding-top: 20px;
+  }
+  .landingtitledivdivdiv{
+    width:inherit;
+    height:auto;
+    display:flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: top;
+  }
+
+  .landingtitle{
+    font-size: 48px;
+    margin:0;
+  }
+  .landingsubtitle{
+    font-size: 48px;
+    margin:0;
+    color:#5ff;
+  }
+}
+
+@media (min-width:500px) and (min-height: 400px) {
+  .landinglogodiv{
+    width:inherit;
+    height:calc(var(--logowidth)* 2.00 *500px);
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+  }
+  .landinglogodivdiv{
+    width:inherit;
+    height:calc(var(--logowidth)*2.00 * 500px - 50px);
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    padding-top: 50px;
+  }
+
+  .landinglogo{
+    width:calc(var(--logowidth) * 2.00 * 500px * 28/36);
+    height:calc(var(--logowidth) * 2.00 * 500px * 28/36);
+    object-fit: cover;
+  }
+}
+
+@media (min-width:720px) {
+  .landing{
+    height:100vh;
+    width:inherit;
+    background-color: #000;
+    position: relative;
+
+    background-size:cover;
+
+    background-blend-mode: screen;
+
+    display: flex;
+    flex-direction:row;
+
+  }
+
+  .landinglogodiv{
+    width:calc(var(--logowidth)*100vw);
+    height:inherit;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+  }
+  .landinglogodivdiv{
+    width:inherit;
+    height:var(--landingheight);
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: top;
+    padding-top: 120px;
+  }
+
+  .landinglogo{
+    width:calc(var(--logowidth) * 100vw * 28/36);
+    height:calc(var(--logowidth) * 100vw * 28/36);
+    object-fit: cover;
+  }
+
+  .landingmiddle{
+    width:20px;
+    height:inherit;
+  }
+
+  .landingtitlediv{
+    width:auto;
+    height:inherit;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+  }
+  .landingtitledivdiv{
+    width:inherit;
+    height:var(--landingheight);
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: top;
+    padding-top: 100px;
+  }
+  .landingtitledivdivdiv{
+    width:inherit;
+    height:360px;
+    display:flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: top;
+  }
+
+  .landingtitle{
+    font-size: 60px;
+    margin:0;
+  }
+  .landingsubtitle{
+    font-size: 60px;
+    margin:0;
+    color:#5ff;
+  }
+
+}
+
+@media (min-width:1280px) {
+  .landing{
+    height:100vh;
+    width:inherit;
+    background-color: #000;
+    position: relative;
+    background-size:cover;
+    background-blend-mode: screen;
+
+    display: flex;
+    flex-direction:row;
+  }
+
+  .landinglogodiv{
+    width:calc(var(--logowidth) * 1280px);
+    height:inherit;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+  }
+  .landinglogodivdiv{
+    width:inherit;
+    height:var(--landingheight);
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: top;
+    padding-top: 120px;
+  }
+
+  .landinglogo{
+    width:calc(var(--logowidth) * 1280px * 28/36);
+    height:calc(var(--logowidth) * 1280px * 28/36);
+    object-fit: cover;
+  }
+
+  .landingmiddle{
+    width:20px;
+  }
+
+  .landingtitlediv{
+    width:auto;
+    height:inherit;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+  }
+  .landingtitledivdiv{
+    width:inherit;
+    height:var(--landingheight);
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: top;
+    padding-top: 110px;
+  }
+  .landingtitledivdivdiv{
+    width:inherit;
+    height:360px;
+    display:flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: top;
+  }
+
+  .landingtitle{
+    font-size: 90px;
+    margin:0;
+  }
+  .landingsubtitle{
+    font-size: 90px;
+    margin:0;
+    color:#5ff;
+  }
+
+}
+
+
+/*todo: delete the old code*/
+.landing {
+  background-color:#000;
+  background: radial-gradient(circle, rgb(100, 200, 300) 0%);
+  transition: none;
+  will-change: background;
+  background-blend-mode: screen;
+}
+
+/*
+@media (prefers-reduced-motion: reduce) {
+  .landing {
+    animation: none;
+  }
+}
+*/
