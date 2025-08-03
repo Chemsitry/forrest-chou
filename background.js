@@ -47,7 +47,7 @@ let lastRender = performance.now();
 const blobs = [
   cyan = new Blob(110, 250, "rgba(0, 177, 170, 0.3) 0%, rgba(0, 177, 170, 0.18) 50%", "transparent 80%" , 700, 760, {acceleration: 12}),
   green = new Blob(890, 400, "rgba(130, 135, 140, 0.3) 0%, rgba(130, 130,130, 0.18) 50%", "transparent 75%" , 700, 700),
-  purple = new Blob(460, 800, "rgba(116, 81, 181, 0.2) 0%, rgba(116, 81, 181, 0.12) 55%", "transparent 75%" , 600, 700, {acceleration: 6, friction: 0.05, xbound: 150, ybound:150}),
+  purple = new Blob(460, 800, "rgba(136, 81, 176, 0.2) 0%, rgba(116, 81, 181, 0.12) 55%", "transparent 75%" , 600, 700, {acceleration: 6, friction: 0.05, xbound: 150, ybound:150}),
 ];
 
 recenter();
@@ -175,9 +175,8 @@ function recenter(){
   }
 }
 
-/*
+
 document.addEventListener('visibilitychange', () => {
   if (document.hidden) cancelAnimationFrame(update);
   else requestAnimationFrame(update);
 });
-*/
