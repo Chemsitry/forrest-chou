@@ -1,6 +1,9 @@
 :root {
-  --landingheight: 600px;
+  --landingheight: 580px;
   --logowidth: .36;
+  --mobilesidepadding: 4px;
+  --chemcyan: #5ff;
+  --chempurple: #c586f2;
 }
 
 body{
@@ -10,7 +13,19 @@ body{
   color:#ffffff;
   margin:0;
   padding:0;
+  overflow-y: scroll;
 }
+
+h2{
+  color:var(--chemcyan);
+}
+
+.landingtext{
+  color:#fff;
+}
+
+
+
 .landing{
   height:100vh;
   width:inherit;
@@ -27,7 +42,7 @@ body{
 }
 
 .landinglogodiv{
-  width:calc(var(--logowidth)*140vh);
+  width:calc(var(--logowidth)*160vh);
   height:inherit;
   display:flex;
   flex-direction:column;
@@ -40,7 +55,7 @@ body{
   flex-direction: column;
   align-items: center;
   justify-content: top;
-  padding-top: 82px;
+  padding-top: 80px;
 }
 
 .landinglogo{
@@ -59,16 +74,16 @@ body{
   height:inherit;
   display:flex;
   flex-direction:column;
-  justify-content: center;
+  justify-content: start;
 }
 .landingtitledivdiv{
   width:inherit;
-  height:var(--landingheight);
+  height:auto;
   display:flex;
   flex-direction: column;
   align-items: center;
   justify-content: top;
-  padding-top: 85px;
+  padding-top: 72px;
 }
 .landingtitledivdivdiv{
   width:inherit;
@@ -77,6 +92,8 @@ body{
   flex-direction: column;
   align-items: left;
   justify-content: top;
+  padding-left: 0px;
+  padding-right: var(--mobilesidepadding);
 }
 
 .landingtitle{
@@ -86,16 +103,26 @@ body{
 .landingsubtitle{
   font-size: 36px;
   margin:0;
-  color:#5ff;
+  color:var(--chemcyan);
+}
+.landingtext{
+  font-size: 20px;
+  margin:0;
+  color:#fff;
+  width: min(100vh,60vw);
+  height:auto;
+  padding-top: 5px;
 }
 
+h2{
+  font-size:36px;
+}
 
-
-@media (min-height:400px){
+@media (min-height:480px){
 
   .landing{
-    height:100vh;
-    width:inherit;
+    height:99vh;
+    width:100%;
     background-color: #000;
     position: relative;
 
@@ -106,15 +133,15 @@ body{
   }
 
   .landinglogodiv{
-    width:inherit;
-    height:calc(var(--logowidth) * (min(200vw,150vh)) );
+    width:auto;
+    height:calc(var(--logowidth) * (min(200vw,136vh)) );
     display:flex;
     flex-direction:row;
     justify-content: center;
   }
   .landinglogodivdiv{
-    width:inherit;
-    height:calc(var(--logowidth)*(min(200vw,150vh)) -50px);
+    width:auto;
+    height:calc(var(--logowidth)*(min(200vw,136vh)) -50px);
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -123,8 +150,8 @@ body{
   }
 
   .landinglogo{
-    width:calc(var(--logowidth) * (min(200vw,150vh)) * 28/36);
-    height:calc(var(--logowidth) * (min(200vw,150vh)) * 28/36);
+    width:calc(var(--logowidth) * (min(200vw,136vh)) * 28/36);
+    height:calc(var(--logowidth) * (min(200vw,136vh)) * 28/36);
     object-fit: cover;
   }
 
@@ -147,15 +174,17 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: top;
-    padding-top: 20px;
+    padding-top: 10px;
   }
   .landingtitledivdivdiv{
-    width:inherit;
+    width:auto;
     height:auto;
     display:flex;
     flex-direction: column;
     align-items: left;
     justify-content: top;
+    padding-left: var(--mobilesidepadding);
+    padding-right: var(--mobilesidepadding);
   }
 
   .landingtitle{
@@ -165,21 +194,45 @@ body{
   .landingsubtitle{
     font-size: 48px;
     margin:0;
-    color:#5ff;
+    color:var(--chemcyan);
+  }
+  .landingtext{
+    font-size: 24px;
+    margin:0;
+    color:#fff;
+    width: min(400px,90vw);
+    height:auto;
+    padding-top: 10px;
+  }
+
+  h2{
+    font-size:36px;
   }
 }
 
-@media (min-width:500px) and (min-height: 400px) {
+@media (max-width:360px) {
+  .landingtitle{
+    font-size: 36px;
+    margin:0;
+  }
+  .landingsubtitle{
+    font-size: 36px;
+    margin:0;
+    color:var(--chemcyan);
+  }
+}
+
+@media (min-width:500px) and (min-height: 480px) {
   .landinglogodiv{
     width:inherit;
-    height:calc(var(--logowidth)* 2.00 *500px);
+    height:calc(var(--logowidth)* 2.00 * min(500px, 70vh));
     display:flex;
     flex-direction:row;
     justify-content: center;
   }
   .landinglogodivdiv{
     width:inherit;
-    height:calc(var(--logowidth)*2.00 * 500px - 50px);
+    height:calc(var(--logowidth)*2.00 * min(500px, 70vh) - 50px);
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -188,8 +241,8 @@ body{
   }
 
   .landinglogo{
-    width:calc(var(--logowidth) * 2.00 * 500px * 28/36);
-    height:calc(var(--logowidth) * 2.00 * 500px * 28/36);
+    width:calc(var(--logowidth) * 2.00 * min(500px, 70vh) * 28/36);
+    height:calc(var(--logowidth) * 2.00 * min(500px, 70vh) * 28/36);
     object-fit: cover;
   }
 }
@@ -211,7 +264,7 @@ body{
   }
 
   .landinglogodiv{
-    width:calc(var(--logowidth)*100vw);
+    width:calc(var(--logowidth)*(min(100vw,200vh)));
     height:inherit;
     display:flex;
     flex-direction:column;
@@ -224,12 +277,12 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: top;
-    padding-top: 120px;
+    padding-top: min(120px,27vh);
   }
 
   .landinglogo{
-    width:calc(var(--logowidth) * 100vw * 28/36);
-    height:calc(var(--logowidth) * 100vw * 28/36);
+    width:calc(var(--logowidth) * (min(100vw,200vh)) * 28/36);
+    height:calc(var(--logowidth) * (min(100vw,200vh)) * 28/36);
     object-fit: cover;
   }
 
@@ -252,7 +305,7 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: top;
-    padding-top: 100px;
+    padding-top: 90px;
   }
   .landingtitledivdivdiv{
     width:inherit;
@@ -261,6 +314,8 @@ body{
     flex-direction: column;
     align-items: left;
     justify-content: top;
+    padding-left: 0px;
+    padding-right: 0px;
   }
 
   .landingtitle{
@@ -270,7 +325,20 @@ body{
   .landingsubtitle{
     font-size: 60px;
     margin:0;
-    color:#5ff;
+    color:var(--chemcyan);
+  }
+
+  .landingtext{
+    font-size: 28px;
+    margin:0;
+    color:#fff;
+    width: 460px;
+    height:auto;
+    padding-top: 10px;
+  }
+
+  h2{
+    font-size:48px;
   }
 
 }
@@ -289,7 +357,7 @@ body{
   }
 
   .landinglogodiv{
-    width:calc(var(--logowidth) * 1280px);
+    width:calc(var(--logowidth) * (min(1280px,200vh)));
     height:inherit;
     display:flex;
     flex-direction:column;
@@ -306,8 +374,8 @@ body{
   }
 
   .landinglogo{
-    width:calc(var(--logowidth) * 1280px * 28/36);
-    height:calc(var(--logowidth) * 1280px * 28/36);
+    width:calc(var(--logowidth) * (min(1280px,200vh)) * 28/36);
+    height:calc(var(--logowidth) * (min(1280px,200vh)) * 28/36);
     object-fit: cover;
   }
 
@@ -329,7 +397,7 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: top;
-    padding-top: 110px;
+    padding-top: 90px;
   }
   .landingtitledivdivdiv{
     width:inherit;
@@ -347,7 +415,53 @@ body{
   .landingsubtitle{
     font-size: 90px;
     margin:0;
-    color:#5ff;
+    color:var(--chemcyan);
+  }
+  .landingtext{
+    font-size: 32px;
+    margin:0;
+    color:#fff;
+    width: 640px;
+    height:auto;
+    padding-top: 10px;
+  }
+
+  h2{
+    font-size:60px;
+  }
+
+}
+
+@media (min-width:1280px) and (max-height:600px) {
+  .landingtitledivdivdiv{
+    width:inherit;
+    height:360px;
+    display:flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: top;
+  }
+
+  .landingtitle{
+    font-size: 60px;
+    margin:0;
+  }
+  .landingsubtitle{
+    font-size: 60px;
+    margin:0;
+    color:var(--chemcyan);
+  }
+  .landingtext{
+    font-size: 28px;
+    margin:0;
+    color:#fff;
+    width: 460px;
+    height:auto;
+    padding-top: 10px;
+  }
+
+  h2{
+    font-size:36px;
   }
 
 }
@@ -361,6 +475,8 @@ body{
   will-change: background;
   background-blend-mode: screen;
 }
+
+
 
 /*
 @media (prefers-reduced-motion: reduce) {

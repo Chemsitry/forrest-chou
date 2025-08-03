@@ -11,4 +11,4 @@ Hi! I coded this to showcase some of my projects and interests.
 - A little ChatGPT written code that I don't fully understand.
 
 ## Live Site
-https://forrest-chou.vercel.app
+https://forrestchou.vercel.app

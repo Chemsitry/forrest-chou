@@ -45,9 +45,9 @@ let lastUpdate = performance.now();
 let lastRender = performance.now();
 
 const blobs = [
-  cyan = new Blob(110, 250, "rgba(0, 177, 189, 0.3) 0%, rgba(0, 177, 189, 0.18) 50%", "transparent 80%" , 700, 760, {acceleration: 12}),
-  green = new Blob(890, 400, "rgba(0, 160, 130, 0.3) 0%, rgba(0, 160,130, 0.18) 50%", "transparent 75%" , 700, 700),
-  blue = new Blob(460, 800, "rgba(73, 101, 181, 0.2) 0%, rgba(63, 81, 181, 0.12) 50%", "transparent 75%" , 600, 700, {acceleration: 6, friction: 0.05, xbound: 150, ybound:150}),
+  cyan = new Blob(110, 250, "rgba(0, 177, 170, 0.3) 0%, rgba(0, 177, 170, 0.18) 50%", "transparent 80%" , 700, 760, {acceleration: 12}),
+  green = new Blob(890, 400, "rgba(130, 135, 140, 0.3) 0%, rgba(130, 130,130, 0.18) 50%", "transparent 75%" , 700, 700),
+  purple = new Blob(460, 800, "rgba(116, 81, 181, 0.2) 0%, rgba(116, 81, 181, 0.12) 55%", "transparent 75%" , 600, 700, {acceleration: 6, friction: 0.05, xbound: 150, ybound:150}),
 ];
 
 recenter();
@@ -123,7 +123,7 @@ function update(now) {
       //console.log("landing.style.background = " + landing.style.background);
     } else {
 
-      let mwh = Math.min(sw, sh);
+      let mwh = Math.floor(Math.min(sw, 0.58*sh));
 
       const blobbackground = blobs.map(blob =>
         `radial-gradient(
@@ -158,11 +158,11 @@ function recenter(){
     blobs[2].ycenter = Math.floor(0.55 * sh + 8);
 
     blobs[0].xsize = 740; blobs[0].ysize = 700;
-    blobs[1].xsize = 680; blobs[1].ysize = 660;
-    blobs[2].xsize = 600; blobs[2].ysize = 600;
+    blobs[1].xsize = 700; blobs[1].ysize = 700;
+    blobs[2].xsize = 500; blobs[2].ysize = 500;
   } else {
-    blobs[0].xcenter = 90;
-    blobs[1].xcenter = 1000;
+    blobs[0].xcenter = -10;
+    blobs[1].xcenter = 950;
     blobs[2].xcenter = 400;
 
     blobs[0].ycenter = 350;
@@ -170,8 +170,8 @@ function recenter(){
     blobs[2].ycenter = 1200;
 
     blobs[0].xsize = 900; blobs[0].ysize = 900;
-    blobs[1].xsize = 900; blobs[1].ysize = 900;
-    blobs[2].xsize = 700; blobs[2].ysize = 750;
+    blobs[1].xsize = 850; blobs[1].ysize = 880;
+    blobs[2].xsize = 620; blobs[2].ysize = 620;
   }
 }
 
