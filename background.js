@@ -24,10 +24,10 @@ function Blob(xcenter, ycenter, color, transparent, xsize, ysize, extra = {}) {
   this.xsize = xsize;
   this.ysize = ysize;
 
-  this.friction = extra.friction || 0.01;
-  this.acceleration = extra.acceleration || 4;
-  this.xbound = extra.xbound || 100;
-  this.ybound = extra.ybound || 100;
+  this.friction = extra.friction || 0.008;
+  this.acceleration = extra.acceleration || 2;
+  this.xbound = extra.xbound || 160;
+  this.ybound = extra.ybound || 160;
 
   this.x = 0;
   this.y = 0;
@@ -39,15 +39,15 @@ function Blob(xcenter, ycenter, color, transparent, xsize, ysize, extra = {}) {
 let t = 0;
 let dt = 0;
 const rate = 60;
-const throttleMs = 50;
+const throttleMs = 66;
 
 let lastUpdate = performance.now();
 let lastRender = performance.now();
 
 const blobs = [
-  cyan = new Blob(110, 250, "rgba(0, 177, 170, 0.3) 0%, rgba(0, 177, 170, 0.18) 50%", "transparent 80%" , 700, 760, {acceleration: 12}),
-  green = new Blob(890, 400, "rgba(130, 135, 140, 0.3) 0%, rgba(130, 130,130, 0.18) 50%", "transparent 75%" , 700, 700),
-  purple = new Blob(460, 800, "rgba(136, 81, 176, 0.2) 0%, rgba(116, 81, 181, 0.12) 55%", "transparent 75%" , 600, 700, {acceleration: 6, friction: 0.05, xbound: 150, ybound:150}),
+  cyan = new Blob(110, 250, "rgba(0, 177, 170, 0.3) 0%, rgba(0, 177, 170, 0.18) 50%", "transparent 80%" , 700, 760, {acceleration: 2}),
+  green = new Blob(890, 400, "rgba(130, 135, 140, 0.3) 0%, rgba(130, 130,130, 0.18) 53%", "transparent 75%" , 700, 700, {friction: 0.01}),
+  purple = new Blob(460, 800, "rgba(136, 81, 176, 0.2) 0%, rgba(116, 81, 181, 0.12) 58%", "transparent 75%" , 600, 700, {acceleration: 1, friction: 0.02, xbound: 140, ybound:120}),
 ];
 
 recenter();
@@ -154,12 +154,12 @@ function recenter(){
     blobs[2].xcenter = 460;
 
     blobs[0].ycenter = Math.floor(0.5 * sh - 441);
-    blobs[1].ycenter = Math.floor(0.5 * sh - 320);
-    blobs[2].ycenter = Math.floor(0.55 * sh + 8);
+    blobs[1].ycenter = Math.floor(0.5 * sh - 300);
+    blobs[2].ycenter = Math.floor(0.5 * sh + 96);
 
     blobs[0].xsize = 740; blobs[0].ysize = 700;
-    blobs[1].xsize = 700; blobs[1].ysize = 700;
-    blobs[2].xsize = 500; blobs[2].ysize = 500;
+    blobs[1].xsize = 650; blobs[1].ysize = 650;
+    blobs[2].xsize = 450; blobs[2].ysize = 450;
   } else {
     blobs[0].xcenter = -10;
     blobs[1].xcenter = 950;
@@ -171,7 +171,7 @@ function recenter(){
 
     blobs[0].xsize = 900; blobs[0].ysize = 900;
     blobs[1].xsize = 850; blobs[1].ysize = 880;
-    blobs[2].xsize = 620; blobs[2].ysize = 620;
+    blobs[2].xsize = 600; blobs[2].ysize = 600;
   }
 }
 

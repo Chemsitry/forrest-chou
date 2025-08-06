@@ -1,0 +1,57 @@
+<div class="divider">
+  <!-- your content here -->
+  <div style = "background-color:f0f; height: inherit; width: inherit"></div>
+</div>
+
+<style>
+  .divider {
+    position: relative;
+    background-color: #222;
+    height: 100px;            /* example height */
+    width: 80%;               /* example width */
+    margin: 40px auto;        /* center it */
+
+    /* mask a 12px fade on all four sides */
+    mask-image:
+      /* horizontal fade: left→center→right */
+      linear-gradient(
+        to right,
+        transparent 0px,
+        black 12px,
+        black calc(100% - 12px),
+        transparent 100%
+      ),
+      /* vertical fade: top→center→bottom */
+      linear-gradient(
+        to bottom,
+        transparent 0px,
+        black 12px,
+        black calc(100% - 12px),
+        transparent 100%
+      );
+    mask-mode: alpha;
+    mask-composite: intersect;
+
+    /* WebKit prefixes for Safari/older browsers */
+    -webkit-mask-image:
+      linear-gradient(
+        to right,
+        rgba(0,0,0,0) 0px,
+        rgba(0,0,0,1) 12px,
+        rgba(0,0,0,1) calc(100% - 12px),
+        rgba(0,0,0,0) 100%
+      ),
+      linear-gradient(
+        to bottom,
+        rgba(0,0,0,0) 0px,
+        rgba(0,0,0,1) 12px,
+        rgba(0,0,0,1) calc(100% - 12px),
+        rgba(0,0,0,0) 100%
+      );
+    -webkit-mask-composite: source-in;
+
+    /* ensure the mask applies to the element itself */
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+  }
+</style>
