@@ -4,7 +4,7 @@
 <title>Forrest Chou</title>
 <base href="" target="_blank">
 <link rel="icon" type="image/x-icon" href="images/varphifavicon.png">
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="stylestest.css">
 <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/dreampulse/computer-modern-web-font/master/fonts.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -48,11 +48,58 @@
 
   <script src = "background.js"> </script>
 
-  <div class = "section" id="projects">
-    <div class = "heading">
-      <h2>Projects!</h2>
+  <div class = "section projects">
+    <div class = "heading projects">
+      <div class = "headingtitle">
+        <h2>Projects!</h2>
+      </div>
     </div>
-    <p>While my main interests are in science, I also enjoy coding and music. Here is a random assortment of projects I find interesting.</p>
+
+    <div class = "projectflex">
+      <a class = "project" id = "ecdwebsite" href = "https://ecdwebsite.vercel.app/" target = _blank>
+        <div class = "projectimagediv">
+          <img class = "projectimage"
+            src ="images\ECDWebsite.png"
+            alt = "ECD Webiste Landing"
+          >
+        </div>
+        <div class = "projecttext">
+        <p class = "projecttitle">ECD Website</p>
+        <p class = "projectdescription">A project for my Early Childhood Development class.</p>
+        </div>
+      </a>
+
+      <a class = "project" href = "https://github.com/Chemsitry/Circuit-Solver/" target = _blank>
+        <div class = "projectimagediv">
+          <img class = "projectimage"
+            src ="images\circuitsolver.png"
+            alt = "circuit solver"
+          >
+        </div>
+        <div class = "projecttext">
+        <p class = "projecttitle">Circuit Solver</p>
+        <p class = "projectdescription">Solves circuits via text input from console using Java.</p>
+        </div>
+      </a>
+
+      <a class = "project" href = "https://drive.google.com/file/d/1mXUemlabVEra7o_nbNwQXffTDoPC-OcL/view?usp=sharing" target = _blank>
+        <div class = "projectimagediv">
+          <img class = "projectimage"
+            src ="images\rachC.jpg"
+            alt = "Performing Rachmaninoff onstage"
+          >
+        </div>
+        <div class = "projecttext">
+        <p class = "projecttitle">Rachmaninoff Prelude in C# Minor</p>
+        <p class = "projectdescription">Performed at a talent show</p>
+        </div>
+      </a>
+
+      <script src = "glow.js"> </script>
+
+    </div>
+
+
   </div>
 
 </body>
