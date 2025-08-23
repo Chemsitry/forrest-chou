@@ -44,7 +44,6 @@ a{
 }
 
 .project {
-  /*
   mask-image:
     linear-gradient(
       to right,
@@ -90,8 +89,6 @@ a{
   -webkit-mask-composite: source-in;
   mask-repeat: no-repeat;
   -webkit-mask-repeat: no-repeat;
-
-  */
 
   overflow: hidden;
   --cx: 50%;
@@ -1062,6 +1059,11 @@ h2{
   transition: none;
   will-change: background;
   background-blend-mode: screen;
+}
+
+
+.project.expand{
+  min-height:400px;
 }
 
 

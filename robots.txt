@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://forrestchou.vercel.app/sitemap.xml

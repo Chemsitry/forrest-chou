@@ -1,0 +1,15 @@
+<meta name="robots" content="noindex">
+
+<style>
+  .thing { display:inline-block; transition: transform .2s; cursor: pointer; }
+  .thing.big { transform: scale(1.5); }
+</style>
+
+<img id="pic" class="thing" src="photo.jpg" alt="Example">
+
+<script>
+  document.getElementById('pic').addEventListener('click', function () {
+    this.classList.toggle('big');
+    console.log(this.style);
+  });
+</script>

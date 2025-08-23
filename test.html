@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<meta name="robots" content="noindex">
+<html lang="en-US">
+<head>
+<title>Forrest Chou</title>
+<base href="" target="_blank">
+<link rel="icon" type="image/x-icon" href="images/varphifavicon.png">
+<link rel="stylesheet" href="stylestest.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/dreampulse/computer-modern-web-font/master/fonts.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+  body {
+    font-family: "Computer Modern Serif", sans-serif;
+  }
+  h1 {
+    font-family: "Computer Modern Serif", sans-serif;
+    font-weight: normal;
+  }
+  h2 {
+    font-family: "Computer Modern Serif", sans-serif;
+    font-weight: normal;
+  }
+</style>
+
+
+<body>
+  <div class = "landing">
+    <div class = "landinglogodiv">
+      <div class = "landinglogodivdiv">
+        <img class = "landinglogo"
+          src ="images/varphilogo-20.png"
+          alt = "phi logo"
+        >
+      </div>
+    </div>
+    <div class = "landingmiddle">
+    </div>
+    <div class = "landingtitlediv">
+      <div class = "landingtitledivdiv">
+        <div class = "landingtitledivdivdiv">
+        <h1 class = "landingtitle">Hi! I'm Forrest,</h1>
+        <h1 class = "landingsubtitle">aka Chemsitry.</h1>
+        <h2 class = "landingtext">I'm a student fascinated by all areas of science, especially physics.</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src = "background.js"> </script>
+
+  <div class = "section projects">
+    <div class = "heading projects">
+      <div class = "headingtitle">
+        <h2>Projects!</h2>
+      </div>
+    </div>
+
+    <div class = "projectflex">
+      <div class = "project" id = "ecdwebsite" href = "https://ecdwebsite.vercel.app/" target = _blank>
+        <div class = "projectimagediv">
+          <img class = "projectimage"
+            src ="images/ECDWebsite.png"
+            alt = "ECD Webiste Landing"
+          >
+        </div>
+        <div class = "projecttext">
+        <p class = "projecttitle">ECD Website</p>
+        <p class = "projectdescription">A project for my Early Childhood Development class.</p>
+        </div>
+      </div>
+
+      <div class = "project" href = "https://github.com/Chemsitry/Circuit-Solver/" target = _blank>
+        <div class = "projectimagediv">
+          <img class = "projectimage"
+            src ="images/circuitsolver.png"
+            alt = "circuit solver"
+          >
+        </div>
+        <div class = "projecttext">
+        <p class = "projecttitle">Circuit Solver</p>
+        <p class = "projectdescription">Solves circuits via text input from console using Java.</p>
+        </div>
+      </div>
+
+      <div class = "project" href = "https://drive.google.com/file/d/1mXUemlabVEra7o_nbNwQXffTDoPC-OcL/view?usp=sharing" target = _blank>
+        <div class = "projectimagediv">
+          <img class = "projectimage"
+            src ="images/rachC.jpg"
+            alt = "Performing Rachmaninoff onstage"
+          >
+        </div>
+        <div class = "projecttext">
+        <p class = "projecttitle">Rachmaninoff Prelude in C# Minor</p>
+        <p class = "projectdescription">Performed at a talent show</p>
+        </div>
+      </div>
+
+      <script src = "glow.js"> </script>
+
+      <script>
+        const proj = document.getElementById('ecdwebsite');
+        const projtitle = proj.querySelector("projecttitle");
+        proj.addEventListener('click', function () {
+          const expanded = this.classList.toggle('expand');
+          console.log("Toggling expand to " + expanded);
+        });
+      </script>
+
+    </div>
+
+    <div class = "section contact">
+      <div class = "heading contact">
+        <div class = "headingtitle">
+          <h2>Contact me</h2>
+        </div>
+      </div>
+
+      <div class = "contactflex">
+        <a class = "acontact" href = "mailto:forrestchou@berkeley.edu"><div class = "classimagediv"><img src="images/gmail.png" alt="" class = "contactimage"></div><div = "contacttext">Email</div></a>
+        <a class = "acontact" href = "https://discordapp.com/users/733378568377335888" target = "_blank"><div class = "classimagediv"><img src="images/discord.png" alt="" class = "contactimage"></div><div = "contacttext">Discord</div></a>
+        <a class = "acontact" href = "https://www.linkedin.com/in/forrest-chou-b24b9a297/" target = "_blank"><div class = "classimagediv"><img src="images/linkedin.png" alt="" class = "contactimage"></div><div = "contacttext">LinkedIn</div></a>
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
